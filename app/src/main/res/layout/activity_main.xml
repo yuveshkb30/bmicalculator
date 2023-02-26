@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvweight"
+        android:layout_width="215dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="87dp"
+        app:cardBackgroundColor="#3F51B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Weight"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/wtnumber"
+                android:layout_width="115dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtWeight"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/white"
+                android:hint="0"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kg"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/wtnumber"
+                android:padding="5dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvheight"
+        android:layout_width="215dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="87dp"
+        app:cardBackgroundColor="#3F51B5"
+        android:layout_below="@id/cvweight">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Height"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/wtnumber1"
+                android:layout_width="115dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtHeight"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/white"
+                android:hint="0"
+                android:inputType="number"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="cm"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/wtnumber1"
+                android:padding="5dp"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvheight"
+        android:layout_centerHorizontal="true"
+        android:text="Calculate"
+        android:textSize="25sp"
+        android:backgroundTint="@color/teal_700"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvresult"
+        android:layout_width="215dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="55dp"
+        app:cardBackgroundColor="#3F51B5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_below="@id/btnCalculate">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+            android:text="Result"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtamt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:layout_below="@+id/txtResult"
+            android:padding="5dp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/txtStatement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_below="@+id/txtamt"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/txtinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:layout_below="@+id/txtStatement"
+            android:padding="5dp"
+            android:textAlignment="center"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>
